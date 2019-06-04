@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var a = 100; //정수
+        var b = 3.14; //실수
+        var c = 1e-3; //지수표기법 1x10 -3 승과 동일
+
+        console.log(a, typeof(a));
+        console.log(b, typeof(b));
+        console.log(c, typeof(c));
+        console.log(typeof(1), typeof("1"));
+
+        var height = prompt("키를 입력해 주세요");
+        console.log(height, typeof(height));
+
+        var height_num = Number(height);
+        console.log(height_num, typeof(height_num));
+
+        var height_int = parseInt(height);
+        var height_float = parseFloat(height);
+
+        console.log(height_int, typeof(height_int));
+        console.log(height_float, typeof(height_float));
+
+        var weight = prompt("무게를 단위까지 입력하시오");
+        console.log(weight, typeof(weight));
+        var weight_num = Number(weight);
+        var weight_int = parseInt(weight);
+        console.log(weight_num, typeof(weight_num));
+        console.log(weight_int, typeof(weight_int));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
