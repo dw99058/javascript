@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>함수</title>
+    <script>
+        function score(){
+            var kor = 95; // 지역변수: 이 함수 안에서만 쓸 수 있음!!!
+            document.write("<br>" + kor);
+        }
+        var kor = 100; // 전역변수
+        document.write(kor); // 100 부터 나옴
+        score(); // 그다음 95 나옴
+
+
+
+
+
+
+        function getGrade2(){
+            kor = 95; // var를 안쓰면 전역 변수임
+        }
+        var kor = 100; // 전역 변수
+        getGrade2(); // 함수 호출 해서 kor이 95가 됨
+        document.write("<br>국어 점수 : " + kor + "<br>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

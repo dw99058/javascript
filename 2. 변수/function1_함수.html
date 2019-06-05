@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>함수</title>
+    <script>
+        function test(){
+            console.log("실행 할 코드입니다.");
+            return; // 값을 반환함
+            console.log("실행이 안되는 코드입니다.");
+        }
+        test();
+
+        var count = 0;
+        hello(); // 함수가 밑에서 정의됨. "hello1" 출력
+        function hello(){
+            count++; // count = count + 1;
+            document.write("hello" + count + "<br>");
+        }
+        hello(); // "hello2" 출력
+        hello(); // "hello3" 출력
+
+        var theHello = function(){
+            var count = 0; // 새로 0으로.. 위에 count랑 다른 변수임 (동명이인)
+            count++;
+            document.write("bye" + count);
+        }
+        theHello();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
