@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function bgColor(){
+            var colorList = [ "orange", "beige", "skyblue", "lightgreen", "#999" ]
+            console.log(colorList[4]);
+            var colorLength = colorList.length;
+            // console.log(colorLength);
+
+            // 0-4까지 출력
+            var colorRandom = Math.floor(Math.random()*colorLength);
+            console.log(colorRandom);
+
+            var bgDoc = document.getElementsByTagName("body")[0];
+            bgDoc.style.backgroundColor = colorList[colorRandom];
+        }
+        bgColor();
+    </script>
+</head>
+<body>
+    <button onclick="bgColor()">배경색상변경</button>
+</body>
+</html>

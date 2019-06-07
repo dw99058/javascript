@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var printMsg = function(msg){ // 익명(무명) 함수 선언
+            document.write("무명 함수 :" + msg + "<br>");
+        }
+
+        function printMsg(msg){ // 기본 함수 선언
+            document.write("기본 함수 :" + msg + "<br>");
+        }
+
+        printMsg("호출되었습니다."); // 무명 함수가 우선이다.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

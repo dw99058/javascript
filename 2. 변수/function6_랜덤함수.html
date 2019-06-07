@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>랜덤함수</title>
+    <script>
+        document.write(Math.random() + "<br>"); // 0이상 1미만 소수점 다 나옴
+        document.write(Math.floor( 2.5 ) + "<br>"); // 내림
+        document.write(Math.round( 2.5 ) + "<br>"); // 반올림
+        document.write(Math.ceil( 2.5 ) + "<br>"); // 올림
+
+        // 0-9 까지 출력
+        document.write(Math.floor(Math.random()*10) + "<br>");
+
+        // 1-10 까지 출력
+        document.write(Math.ceil(Math.random()*10) + "<br>");
+        document.write(Math.floor(Math.random()*10) + 1 + "<br>");
+
+        // 10, 20, 30. 40, 50 출력
+        document.write(Math.ceil(Math.random() * 5) * 10)
+
+        // 0 부터 시작하는거는 floor 쓰면되고, 1부터 시작하는거면 ceil 쓰면 된다.
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
