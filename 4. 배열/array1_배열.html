@@ -26,7 +26,7 @@
         fruit2.unshift("포도"); // 맨 앞에 추가하기
         console.log(fruit2);
 
-        fruit2.splice(2, 1, "블루베리"); // 요소를 지정해서 삭제 : 인덱스번호, 제거, 추가하는
+        fruit2.splice(2, 1, "블루베리"); // 요소를 지정해서 삭제 : 인덱스번호, 제거 될 개수, 추가하는
         console.log(fruit2);
 
         fruit2.pop(); // 맨 마지막 요소 삭제
@@ -35,7 +35,7 @@
         fruit2.shift(); // 맨 첫번 째 요소 삭제
         console.log(fruit2);
 
-        var fruit4 = fruit2.slice(1, 3); // 잘라내는 값을 저장함...... 1~2 까지임...
+        var fruit4 = fruit2.slice(1, 3); // 잘라내는 값을 저장함...... 1에서 부터 3 앞까지 (2까지)
         console.log(fruit4);
 
         var fruit2 = fruit4;

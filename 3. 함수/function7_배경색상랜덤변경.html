@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script>
-        function bgColor(){
+        function bgColorChange(){
             var colorList = [ "orange", "beige", "skyblue", "lightgreen", "#999" ]
             console.log(colorList[4]);
             var colorLength = colorList.length;
@@ -19,10 +19,14 @@
             var bgDoc = document.getElementsByTagName("body")[0];
             bgDoc.style.backgroundColor = colorList[colorRandom];
         }
-        bgColor();
+
+        window.onload = function(){
+            bgColorChange();
+        } // 문서를 업로드 하고 난 뒤에 실행하기
+        
     </script>
 </head>
 <body>
-    <button onclick="bgColor()">배경색상변경</button>
+    <button onclick="bgColorChange()">배경색상변경</button>
 </body>
 </html>

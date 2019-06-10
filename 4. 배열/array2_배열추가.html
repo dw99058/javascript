@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var li = ['a', 'b', 'c', 'd', 'e'];
+
+        li.push('f'); // 배열의 마지막에 원소 추가
+        console.log(li);
+
+        li = li.concat('g'); // 배열에 복수의 원소를 추가
+        console.log(li);
+
+        li = li.concat(['h', 'i']); // 배열에 복수의 원소를 추가
+        console.log(li);
+
+        li.unshift('z'); // 배열의 시작에 원소를 추가
+        console.log(li);
+
+        li.splice(2,0,'B'); // 들어갈 위치, 제거 할 원소 개수, ('B'가 인덱스번호가 2가 되야함)
+        console.log(li);
+
+        liSlice = li.slice(1,3);
+        console.log(liSlice);
+
+        li = li.reverse(); // 역순
+        console.log(li);
+
+        li = li.sort(); // 정배열
+        console.log(li);
+
+        li = li.join('-'); // 배열 요소와 요소 사이에 문자열 넣는다.
+        console.log(li);
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

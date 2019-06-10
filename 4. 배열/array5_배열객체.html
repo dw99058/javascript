@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var greenArr = ["교대", "방배", "강남"];
+        var yellowArr = ["미금", "정자", "수서"];
+
+        greenArr.splice(2, 1, "서초", "역삼");
+
+        var data1 = yellowArr.pop(); // yellowArr배열에서 빼서 data1에 저장
+        var data2 = yellowArr.shift(); // yellowArr배열에서 빼서 data2에 저장
+        console.log(data1, data2, yellowArr); // yellowArr에는 결과적으로 정자만 남는다.
+
+        yellowArr.push(data2); // 정자에서 맨뒤에 data2 추가
+        yellowArr.unshift(data1); // 정자,미금 에서 맨 앞에 data1 추가
+
+        var test = prompt("yellowArr의 최종배열값을 입력하시오");
+        if(test == yellowArr){
+            alert("정답입니다")
+        }else{
+            alert("틀렸습니다")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

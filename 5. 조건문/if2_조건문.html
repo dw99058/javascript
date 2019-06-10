@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        num = 0;
+        function printNum(){
+            num++;
+            document.write(num + "<br>");
+            if(num == 10) return; // 10이 되면 멈추기 (return)
+            printNum(); // 무한 반복
+        }
+        printNum();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
