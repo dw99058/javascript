@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var id = prompt("아이디를 입력하세요");
+
+        if(id == "admin"){
+            var pw = prompt("비밀번호를 입력하세요");
+            if(pw == "123456"){
+                location.href ="loginSuccess.html";
+            }else{
+                location.href ="loginError.html";
+            }
+        }else{
+            alert("아이디를 잘못입력했습니다!");
+        }
+        
+    </script>
+</body>
+</html>
