@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1><strong id="where"></strong>의 지역번호는 <strong id="number"></strong>입니다.</h1>
+
+    <script>
+            var where = prompt("지역번호가 궁금한 지역명을 적어주세요");
+            document.getElementById("where").innerText=where;
+            var number = document.getElementById("number");
+    
+            switch(where){
+                case "서울":
+                    number.innerText ="02";                  
+                break;
+                case "대구":
+                    number.innerText="053"; 
+                break;
+                case "부산":
+                    number.innerText="051"; 
+                break;
+                case "인천":
+                    number.innerText="032"; 
+                break;
+                case "대전":
+                    number.innerText="042"; 
+                break;
+                default:
+                    document.getElementsByTagName("h1")[0].innerText=where + "은(는) 없는 지역번호 입니다."
+            }
+            
+        </script>
+</body>
+</html>

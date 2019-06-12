@@ -27,7 +27,15 @@
 
         function gallery(direct){
             if(direct == 1){
+                if(num == 8) return;
                 num++;
+                //또는 if(num >= 9) return;
+                console.log(num);
+            }else{
+                if(num == 1) return;
+                num--;
+                //또는 if(num <= 0) return;
+                console.log(num);
             }
 
             var imgTag = document.getElementById("photo");

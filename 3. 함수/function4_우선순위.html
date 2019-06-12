@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script>
+        printMsg("호출되었습니다."); // 맨위에서 호출하면 기본함수가 우선이다.
+
         var printMsg = function(msg){ // 익명(무명) 함수 선언
             document.write("무명 함수 :" + msg + "<br>");
         }
@@ -14,7 +16,7 @@
             document.write("기본 함수 :" + msg + "<br>");
         }
 
-        printMsg("호출되었습니다."); // 무명 함수가 우선이다.
+        //printMsg("호출되었습니다."); // 밑에서 호출하면 무명 함수가 우선이다.
     </script>
 </head>
 <body>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>switch-case</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        var fruitName = document.getElementsByTagName("h1")[0];
+        var fruitInput = prompt("제일 좋아하는 과일은", "야채말고");
+
+        switch(fruitInput){
+            case "망고":
+                fruitName.innerText = fruitInput + "과일이 최고!";
+                break;
+            case "블루베리":
+                fruitName.innerText = fruitInput + "과일이 최고!";
+                break;
+            case "포도":
+                fruitName.innerText = fruitInput + "과일이 최고!";
+                break;
+            default:
+                fruitName.innerText = "채소가 제일";
+        }
+    </script>
+</body>
+</html>
