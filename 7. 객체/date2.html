@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>날짜계산</title>
+    <script>
+        var birthDay = new Date(1900,1,1);
+        var today = new Date();
+        var longDay = Math.floor((today-birthDay) / 86400000);
+        document.write("생일로부터 지난 날수는" + longDay + " 입니다.")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

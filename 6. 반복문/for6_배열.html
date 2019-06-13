@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var fruit = function(){
+            return ["apple", "strawberry", "watermelon"]
+        } // 변수에 무명함수 넣으면 불러올 때 fruit() 라고 괄호를 뒤에 붙여야 한다
+
+        for(var i in fruit()){
+            document.write(fruit()[i].toUpperCase() + "<br>");
+            document.body.style.fontSize = "50px";
+        }
+
+
+
+
+        function fruit(){
+            return ["grape", "melon", "orange"]
+        }
+        var fruit = fruit(); // 이렇게 하면 괄호 안붙여도 된다...
+
+        for(var i in fruit){
+            document.write(fruit[i].toUpperCase() + "<br>");
+            document.body.style.fontSize = "50px";
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
