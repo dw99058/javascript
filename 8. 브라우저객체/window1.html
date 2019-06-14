@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BOM</title>
+    <script>
+        var pop = window.open("winpopup.html", "pop1", "width = 250, height = 350, left=300, top=10, scrollbars=no, toolbars=no");
+    </script>
+</head>
+<body>
+    <!-- moveTo, resizeTo -->
+    <button onclick="pop.moveTo(400,10);">브라우저 창 위치 변경</button>
+    <button onclick="pop.resizeTo(270,450);">브라우저 창 크기 변경</button>
+</body>
+</html>

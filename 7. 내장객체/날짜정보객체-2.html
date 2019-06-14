@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var m = new Date();
+        var nowYear = m.getFullYear();
+        console.log(m, nowYear);
+        var lastDay = new Date(nowYear, 11, 31);
+        console.log(lastDay);
+        var dDay = lastDay - m;
+        console.log(dDay); 
+        var dDay = Math.ceil(dDay/(24*60*60*1000)); //86400000
+        console.log(dDay);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
