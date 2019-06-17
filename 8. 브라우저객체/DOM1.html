@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // window.onload = function () {
+            function bgChange() {
+                document.body.style.backgroundColor = "pink";
+            }
+        // }
+    </script>
+</head>
+<body>
+    <button onclick="bgChange()">배경바꾸기</button>
+    <div>
+        <h1>선호하는 음식</h1>
+        <div id="food_1">
+            <h2 id="title">한식</h2>
+            <ol>
+                <li>김치</li>
+                <li>불고기</li>
+                <li>비빔밥</li>
+            </ol>           
+        </div>
+        <div id="food_2">
+            <h2>양식</h2>
+            <ol id="list">
+                <li>돈까스</li>
+                <li id="pizza">피자</li>
+                <li>파스타</li>
+            </ol>
+        </div>
+    </div>
+    <script>
+        var heading = document.getElementsByTagName("h1");
+        heading[0].style.color = "green";
+
+        // var heading2 = document.getElementsByTagName("h2");
+        // heading2[0].style.color = "red";
+        var heading2 = document.getElementById("title");
+        heading2.style.color = "red";
+
+        var bulgogi = document.getElementsByTagName("li");
+        bulgogi[1].style.backgroundColor = "red";
+
+        var donkka = document.getElementById("list").getElementsByTagName("li");
+        donkka[0].style.backgroundColor = "pink";
+    </script>
+</body>
+</html>

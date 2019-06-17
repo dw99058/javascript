@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        console.log(screen.width); // 모니터 넓이
+        console.log(screen.height); // 모니터 높이
+        console.log(screen.availWidth); // 작업표시줄을 제외한 화면의 너비값
+        console.log(screen.availHeight); // 작업표시줄을 제외한 화면의 높이값
+        console.log(screen.colorDepth); // 사용자가 모니터가 표현 가능한 컬러 bit를 반환 ex) 24bit true 칼라면 24
+    </script>
+</head>
+<body>
+    <script>
+        if (screen.colorDepth <= 8)
+            // simple blue background color for 8 bit screens
+            document.body.style.background = "#0000ff";
+        else
+            //fancy blue background color for modern screens
+            document.body.style.background = "#87CEFA";
+
+        // 참고)) 한줄이면 {} 중괄호 생략 가능
+    </script>
+</body>
+</html>
