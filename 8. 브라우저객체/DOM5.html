@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <ol>
+        <li>HTML</li>
+        <li class="active">CSS</li>
+        <li>JavaScript</li>
+    </ol>
+    <script>
+        var list1 = document.querySelector('li'); // querySelector만 쓰면 첫번 째 요소만 선택됨 (여기서는 첫번 째 li)
+        list1.style.color = "red";
+
+        var list2 = document.querySelector('.active');
+        list2.style.color = "blue";
+
+        var list3 = document.querySelectorAll('li'); // 모든 li를 for문을 사용하여 변경. list3은 배열이다.
+        for(var name in list3){
+            list3[name].style.backgroundColor = "#ccc";
+        }
+    </script>
+</body>
+</html>

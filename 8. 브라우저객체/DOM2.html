@@ -13,5 +13,12 @@
         <p>내용3</p>
         <p>내용4</p>
     </div>
+    <script>
+        //document.getElementById("wrap").firstChild.style.color="red"; // 첫번째 요소를 선택하려고 했지만 위에 보면 엔터를 쳐서 공백이 생겨서 공백을 자식으로 인식함
+        document.getElementById("wrap").firstChild.nextSibling.style.color="red"; // 그래서 nextSibling 으로 공백 다음 요소 선택
+
+        var p = document.getElementsByTagName("p")[1];
+        p.nextSibling.nextSibling.style.backgroundColor="yellow"; 
+    </script>
 </body>
 </html>

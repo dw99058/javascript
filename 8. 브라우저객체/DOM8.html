@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 객체 마우스 오버 아웃</title>
+</head>
+<body>
+    <h1 id="title">마우스아웃</h1>
+
+    <a href="#" id="btn">
+        <img src="../images/btn_out.gif" alt="버튼">
+    </a>
+    <p id="img_src"></p>
+
+    <script>
+        var btn = document.getElementById("btn");
+        var path = document.getElementById("img_src");
+
+        btn.onmouseover = function(){
+            document.getElementById("title").innerHTML = "마우스오버";
+            btn.children[0].setAttribute("src","../images/btn_over.gif");
+            path.innerHTML = btn.children[0].src;
+        }
+        btn.onmouseout = function(){
+            document.getElementById("title").innerHTML = "마우스아웃";
+            btn.children[0].src = "../images/btn_out.gif"; // 바로 src 적어도 됨
+            path.innerHTML = btn.children[0].src;
+        }
+
+        // 값을 대입할 때는 "" 안에다가 넣는다고 생각하면 됨.
+    </script>
+</body>
+</html>

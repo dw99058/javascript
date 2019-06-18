@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 객체</title>
+</head>
+<body>
+    <div id="wrap">
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+        <p>내용4</p>
+        <a href="#" id="goLink">내용5</a>
+    </div>
+    <script>
+        for(var name in Node){
+            console.log(name, Node[name]);
+        }
+
+        var tagDiv = document.getElementById('wrap').nodeType; // 1반환
+        var tagDivChild = document.getElementById('wrap').firstChild.nodeType; // 3반환 : firstchild 가 p가 아닌 공백이 나옴 엔터를 쳤기때문에
+        var tagA = document.getElementById('goLink').getAttributeNode('href').nodeType; //2반환
+
+        console.log(tagDiv, tagDivChild, tagA);
+
+        document.getElementById('wrap').children[0].style.color = "red"; // firstChild 말고 children[0] 으로 하면 공백 인식 안함
+
+        var p = document.getElementsByTagName("p")[1]; // 공백이 선택된다.
+        var nextObj = p.nextSibling;
+
+        nextObj = nextObj.nextSibling;
+        nextObj.style.backgroundColor = "yellow";
+    </script>
+</body>
+</html>
