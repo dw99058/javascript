@@ -48,7 +48,8 @@
             <label for="subject1">과목3</label>
             <br>
 
-            <button id="btn">회원가입</button>
+            <input id="btn" type="submit" value="등록 완료">
+            <input type="reset" value="등록 취소">
         </fieldset>
     </form>
 
@@ -67,12 +68,37 @@
         } 
 
         // 약관동의
-        var btn = document.getElementById("btn");
-        var accept = document.accept;
+        //var accept = document.getElementById("accept");
+        var accept = document.f2.accept; // f2를 붙여야 함.. form태그를 전송해야하기 때문에
 
-        btn.onclick = function(){
-            if(accept){
+        console.log(accept);
 
+        document.f2.onsubmit = function(){
+            if(accept.checked == false){
+                alert("약관에 동의하셔야합니다.");
+                accept.focus(); // 마지막에 포커스가 이쪽으로 가도록! (접근성문제)
+            }
+        }
+
+        // 첫번 째 폼 요소에 전송버튼 눌렀을 때 실행
+        /*
+        document.f1.onsubmit = function(){
+            var pw1 = document.f1.user_pw1;
+            var pw2 = document.f1.user_pw2;
+
+            pw2.value = pw1.value;
+            pw2.disabled = true;
+            return false; // 원래의 이벤트를 취소시킬 때
+        }
+        */
+        document.f1.onsubmit = function(){
+            var pw1 = document.f1.user_pw1.value; // input에 입력하는 값은 value 이다.
+            var pw2 = document.f1.user_pw2.value;
+
+            if(pw1 != pw2){
+                alert("비밀번호가 다릅니다");
+            }else{
+                alert("성공")
             }
         }
     </script>

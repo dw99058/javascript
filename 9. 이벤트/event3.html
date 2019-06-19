@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var p;
+
+        function eventAll(){
+            p = document.getElementsByTagName("p")[0];
+            p.onmouseover = event1;
+            p.onmouseout = event2;
+        }
+
+        function event1(){
+            p.style.background = "pink";
+        }
+        function event2(){
+            p.style.background = "white";
+        }
+    </script>
+</head>
+<body onload="eventAll();">
+    <p>여기에 마우스를 올리세요</p>
+</body>
+</html>

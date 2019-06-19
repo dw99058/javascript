@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var p;
+        window.onload = function(){
+            p = document.getElementsByTagName("p")[0];
+            p.addEventListener("mouseover",event1); // 함수명 뒤에 () 들어가지 않는다...
+            p.addEventListener("mouseout",event2); // 앞에on이 붙으면 eventListener이다.. addEventListener를 쓰면 on 빼고 mouseout만 하면 됨...!
+        }
+        
+        function event1(){
+            p.style.backgroundColor="pink";
+        }
+        function event2(){
+            p.style.backgroundColor="white";
+        }
+    </script>
+</head>
+<body>
+    <p>여기에 마우스를 올리세요</p>
+</body>
+</html>
