@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /*
+        function hideMenu(){
+            alert("오른쪽 클릭 <컨텍스트 메뉴> 금지");
+            return false;
+        }
+        document.oncontextmenu=hideMenu;
+        */
+        // oncontextmenu 오른쪽 마우스 안됨
+
+        document.onmousedown = click;
+        function click(){
+            if(event.button == 2){
+                alert("죄송합니다. \n 오른쪽 마우스는 사용할 수 없습니다."); // 클릭하는 행위를 alert로 바꿔버림
+            }
+        }// 1: 왼쪽 버튼, 2: 오른쪽 버튼, 4:가운데 버튼
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

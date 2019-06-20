@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>onload</title>
+    <script>
+        /*
+        window.onload = function(){
+            alert('문서가 로딩되면 경고창 실행');
+        }
+        */
+
+        function loading(){
+            alert("확인을 누르면 2초 후에 네이버로 이동합니다");
+            setTimeout('location.href = "http://naver.com";', 2000);           
+        }
+        // document.onload는 거의 쓰지 않음
+    </script>
+</head>
+<!-- <body onload="alert('문서가 로딩되면 경고창 실행');"> -->
+<body onload="loading()">
+    <h3>HTML 문서의 로딩 완료, onload</h3>
+</body>
+</html>

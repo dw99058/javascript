@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        function calc(){
+            var exp = document.getElementById('exp');
+            var result = document.getElementById('result');
+            result.value = eval(exp.value); // eval() 텍스트로 된 자바스크립트 코드를 실행시킬 수 있는 함수 입니다. 이 함수를 사용하면 소스 코드를 동적으로 실행 가능 (보안 문제로 사용 권장하지 않음)
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="exp">식</label>
+        <input type="text" id="exp" value=""><br>
+        <label for="result">값</label>
+        <input type="text" id="result" readonly>
+        <input type="button" value="계산" onclick="calc();" ondblclick="exp.value = ''"> <!--더블클릭하면 식이 지워짐-->
+    </form>
+</body>
+</html>

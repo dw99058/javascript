@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        function changeImg(){
+            var fruit = document.getElementById('fruit'); // 셀렉트박스
+            var myImg = document.getElementById('myImg'); // 이미지
+
+            myImg.onload = function(){ // 이미지 로딩 다 되면
+                var mySpan = document.getElementById('mySpan');
+                mySpan.innerHTML = myImg.width + '*' + myImg.height
+            }
+
+            var index = fruit.selectedIndex; // 선택 된 옵션의 인덱스
+            console.log(index); // select 태그에 onchange 넣어야 작동함
+            myImg.src = fruit.options[index].value; // <option>의 value 속성을 myImg src 속성에 넣는다
+        }
+    </script>
+</head>
+<body onload="changeImg();">
+    <h3>onload로 이미지 크기 출력</h3>
+    <hr>
+    <form action="">
+        <select name="" id="fruit" onchange="changeImg()"> <!-- select 에는 onchange 로 값을 받아옴 -->
+            <option value="../images/apple.png">사과</option>
+            <option value="../images/banana.png">바나나</option>
+            <option value="../images/mango.png">망고</option>
+        </select>
+        <span id="mySpan">이미지 크기</span>
+    </form>
+    <p><img id="myImg" src="../images/apple.png" alt=""></p>
+</body>
+</html>
