@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이미지 객체 생성해서 불러오면 로딩 속도가 빠름</title>
+    <script>
+        var files = [ "../images/penguins.png",
+                        "../images/lighthouse.png",
+                        "../images/Chrysanthemum.png",
+                        "../images/Desert.png",
+                        "../images/Hydrangeas.png",
+                        "../images/Jellyfish.png",
+                        "../images/Koala.png",
+                        "../images/Tulips.png" ];
+
+        var imgs = new Array(); // 빈 배열
+        console.log(imgs);
+
+        for(var i=0; i<files.length; i++){
+            imgs[i] = new Image(); // 이미지 객체 생성
+            imgs[i].src = files[i];
+            console.log(imgs[i]);
+        }
+
+        var next = 1;
+        function changeImg(img){
+            img.src = imgs[next].src;
+            next++;
+            if(next == 8){
+                next = 0;
+            }
+        }
+    </script>
+</head>
+<body>
+    <img onclick="changeImg(this)" src="../images/Penguins.png" alt="" width="300">
+</body>
+</html>

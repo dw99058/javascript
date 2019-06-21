@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>조별 발표 순서 정하기</h1>
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+    <button onclick="select()">조선택</button>
+
+    <script>
+        function select(){
+            var i = 0;
+            var groupList = ['1조', '2조', '3조', '4조']
+
+            while(groupList.length > 0){ // 4,3,2,1 개 일 때까지 반복
+                var random = Math.floor(Math.random()*groupList.length); // 그룹리스트 인덱스 랜덤번호
+                
+                var li = document.getElementsByTagName('li'); // 각 li를 객체로 지정하기.. 배열로 담김?!
+
+                li[i].innerHTML = groupList[random]; // i에 0이 대입되어서 첫번 째 li에 random 값 출력
+
+                groupList.splice(random, 1); // 배열에 random index 제거, 하나만 빼기
+
+                i++; // 두번 째 li
+            }
+        }
+    </script>
+</body>
+</html>l

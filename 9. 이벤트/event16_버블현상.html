@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이벤트 흐름</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            padding: 50px;
+            border: 1px solid #000;
+        }
+        p{
+            width: 100px;
+            height: 100px;
+            margin: 0;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div onclick="showMsg();">
+        <p onclick="showMsg();">Click Me!!</p>
+    </div>
+    <span id="num1"></span>
+    <script>
+        var i = 0;
+        function showMsg() {
+            var num1 = document.querySelector('#num1');
+            num1.innerHTML = i++;
+            console.log(i); // 버블현상 발생
+            event.stopPropagation();
+        }
+
+    </script>
+</body>
+</html>
